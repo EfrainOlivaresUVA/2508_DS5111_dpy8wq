@@ -1,2 +1,10 @@
 pandas
 numpy
+<<<<<<< Updated upstream
+=======
+lxml
+html5lib
+beautifulsoup4
+pylint
+pytest
+>>>>>>> Stashed changes
