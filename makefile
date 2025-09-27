@@ -9,8 +9,6 @@ update: env
 	. env/bin/activate; pip install -r requirements.txt
 
 
-<<<<<<< Updated upstream
-=======
 ygainers.csv: ygainers.html
 	python -c "import pandas as pd; raw = pd.read_html('ygainers.html'); raw[0].to_csv('ygainers.csv')"
 
@@ -25,4 +23,3 @@ lint:
 
 test:
 	pytest -vv tests/
->>>>>>> Stashed changes
