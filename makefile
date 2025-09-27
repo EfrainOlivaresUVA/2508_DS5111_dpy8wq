@@ -19,4 +19,3 @@ lint:
 
 test:
 	. env/bin/activate; pytest -vv tests/
-
