@@ -29,6 +29,24 @@ print(df[['Unnamed: 0']].head())
 df['symbol'] = df['Unnamed: 0'].apply(lambda x: re.findall(rex, x)[0])
 
 print(df[['Unnamed: 0', 'symbol']].head())
+if __name__=="__main__":
+    import sys
+    fname = sys.argv[1]
+
+
+
+
+
+
+
+
+
+
+
+#
+#
+#
+
 
 
 
