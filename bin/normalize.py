@@ -1,6 +1,11 @@
 import pandas
 
 
+
+def hello_world(name):
+    return(f"Hello World! and hi {name}")
+
+
 # The Price column in ygainers has the price in a longer string that looks like
 # price amount_difference (percentage_difference)
 # You need to parse the string to isolate the price
@@ -28,4 +33,7 @@ df['symbol'] = df['Unnamed: 0'].apply(lambda x: re.findall(rex, x)[0])
 print(df[['Unnamed: 0', 'symbol']].head())
 
 
-
+if __name__=="__main__":
+    import sys
+    fname = sys.argv[1]
+    
