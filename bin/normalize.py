@@ -22,15 +22,15 @@ def hello_world(name):
 # It usually looks like this "QMMM Holdings Ltd. Cl A (QMMM)"
 # this rege can help extract it.
 
-rex = r'\(([A-Z]+)\)$'
-import re
-df = pandas.read_csv('wsjgainers.csv')
-print(df.columns)
-print(df[['Unnamed: 0']].head())
+#rex = r'\(([A-Z]+)\)$'
+#import re
+#df = pandas.read_csv('wsjgainers.csv')
+#print(df.columns)
+#print(df[['Unnamed: 0']].head())
 
-df['symbol'] = df['Unnamed: 0'].apply(lambda x: re.findall(rex, x)[0])
+#df['symbol'] = df['Unnamed: 0'].apply(lambda x: re.findall(rex, x)[0])
 
-print(df[['Unnamed: 0', 'symbol']].head())
+#print(df[['Unnamed: 0', 'symbol']].head())
 
 
 if __name__=="__main__":
