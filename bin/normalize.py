@@ -6,16 +6,16 @@ def hello_world(name):
     return(f"Hello World! and hi {name}")
 
 
-# The Price column in ygainers has the price in a longer string that looks like
-# price amount_difference (percentage_difference)
-# You need to parse the string to isolate the price
-df = pandas.read_csv('ygainers.csv')
+## The Price column in ygainers has the price in a longer string that looks like
+## price amount_difference (percentage_difference)
+## You need to parse the string to isolate the price
+#df = pandas.read_csv('ygainers.csv')
+#
+#print(df[['Price']].head())
+#
+#df['price'] = df['Price'].apply(lambda x: str(x).split()[0])
 
-print(df[['Price']].head())
-
-df['price'] = df['Price'].apply(lambda x: str(x).split()[0])
-
-print(df[['Price', 'price']].head())
+# print(df[['Price', 'price']].head())
 
 
 # The wjs version will have the symbol embedded in a longer string
