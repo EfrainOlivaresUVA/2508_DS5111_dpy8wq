@@ -14,6 +14,16 @@ wsjgainers.html:
 wsjgainers.csv: wsjgainers.html
 	. env/bin/activate; python -c "import pandas as pd; raw = pd.read_html('wsjgainers.html'); raw[0].to_csv('wsjgainers.csv')"
 
+
+.PHONY: wsjgainers_tstamp
+wsjgainers_tstamp: wsjgainers.csv
+	mv wsjgainers.csv wsjgainers_`date +"%Y%m%d_%H%M%S"`.csv
+
+.PHONY: clean
+clean:
+	rm wsjgainers.html wsjgainers.csv | true
+
+
 lint:
 	. env/bin/activate; pylint bin/normalize.py
 
